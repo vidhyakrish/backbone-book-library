@@ -13,19 +13,16 @@ define([
         render: function(options) {
             this.$el.html('<h3>All my books</h3>');
 
-            console.log(this.$el);
-
             var _this = this;
 
             this.collection.each(function(model) {
                 _this.$el.append(_this.template({
-                    author: model.author
+                    author: model.get('author'),
+                    name: model.get('name'),
+                    series: model.get('series_t')
                 }));
             });
-
         }
-
-
     });
     return myBookLibraryView;
 });

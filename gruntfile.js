@@ -40,7 +40,7 @@ module.exports = function(grunt) {
                 'font-faces': false
             },
             main: {
-                src: ['js/css/*.css']
+                src: ['css/*.css']
             }
         },
 
@@ -67,7 +67,7 @@ module.exports = function(grunt) {
 
 
             css: {
-                files: ['js/**/*.less'],
+                files: ['css/*.css'],
                 tasks: ['csslint']
             },
 

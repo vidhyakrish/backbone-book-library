@@ -1,6 +1,6 @@
 define([
-    'js/vendor/jquery', 'js/vendor/underscore', 'js/vendor/backbone', 'js/router/Router'
-], function($, _, Backbone, Router) {
+    'js/vendor/jquery', 'js/vendor/underscore', 'js/vendor/backbone', 'js/router/Router', 'css/bootstrap.min'
+], function($, _, Backbone, Router, Bootstrap) {
     var initialize = function() {
         Router.initialize();
     };
