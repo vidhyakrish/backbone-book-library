@@ -11,6 +11,5 @@ require.config({
 require(['js/router/Router'], function(Router) {
 
     var router = new Router();
-
     Backbone.history.start();
 });

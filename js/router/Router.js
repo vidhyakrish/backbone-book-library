@@ -1,7 +1,15 @@
 define([
-    'jquery', 'underscore', 'backbone', 'js/collections/myBookCollection', 'js/views/header', 'js/views/myBookLibraryView'
+    'jquery', 'underscore', 'backbone', 'js/collections/myBookCollection', 'js/collections/myFavouritesCollection', 'js/views/header', 'js/views/myBookLibraryView', 'js/views/favouritesView'
 
-], function($, _, Backbone, MyBookCollection, headerView, libraryView) {
+], function($, _, Backbone, MyBookCollection, favouritesCollection, headerView, libraryView, myfavouritesView) {
+    var myFavouritesCollection = new favouritesCollection();
+    var newView = new headerView();
+    var library = new libraryView({
+        favouritesCollection: myFavouritesCollection
+    });
+
+
+
     var Router = Backbone.Router.extend({
         initialize: function(options) {
             this.route('', 'index');
@@ -10,23 +18,18 @@ define([
         },
 
         index: function() {
-            var newView = new headerView({
-                el: 'header'
-            });
-            var library = new libraryView({
-                el: '#container'
-            });
-
+            $('header').empty();
+            newView.$el.appendTo('header');
+            $('#container').empty();
+            library.$el.appendTo('#container');
         },
 
         viewBook: function(id) {
-            MyBookCollection.each(function(model) {
-                if (id === model.get('id')) {
-                    console.log(model.get('author'));
-                }
+            library.remove();
+            library = new myfavouritesView({
+                favouritesCollection: myFavouritesCollection
             });
-
-            console.log('display book', id);
+            library.$el.appendTo('#container');
         }
     });
 

@@ -12,8 +12,8 @@ define([
             'click a': 'addToFavourites'
         },
 
-        initialize: function() {
-            this.myFavouritesCollection = new favouritesCollection();
+        initialize: function(options) {
+            this.myFavouritesCollection = options.favouritesCollection;
             this.render();
         },
 
