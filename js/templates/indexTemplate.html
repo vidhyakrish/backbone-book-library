@@ -1,9 +1,23 @@
-<ul id="index-template">
+<div id="index-template" class="row">
 
- <li><%= name %></li>
-    <li><%= author %></li>
-      <li><%= series %></li>
+<% items.each(function(item){ %>
+<div class="book-item">
+
+  <i class="icon-book"></i><h3><%- item.get('name') %><span > (<%- item.get('id')%>)</span></h3>
+  <h4 class="text-info"><%- item.get('author') %></h4>
+<p>
+  <span class ="btn btn-default"><%- item.get('genre_s').toUpperCase() %></span>
+<span class ="btn btn-default">&pound;<%- item.get('price') %></span>
+<% if(!!item.get('series_t')) { %><span class ="btn btn-default"><%- item.get('series_t') %></span><%}%>
 
 
-</ul>
+</p>
+
+     <a class="btn btn-success" id="<%- item.get('id') %>">Add to favourites </a>
+</div>
+
+<% }); %>
+
+</div>
+
 
