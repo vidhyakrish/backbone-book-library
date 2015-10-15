@@ -1,14 +1,14 @@
 define([
-    'jquery', 'underscore', 'backbone', 'js/collections/bookCollection'
+  'jquery', 'underscore', 'backbone', 'js/collections/bookCollection'
 
 ], function($, _, Backbone, BookCollection) {
 
-    var myBookCollection = new BookCollection();
-    myBookCollection.fetch({
-        async: false // assskkkkk
-    });
+  var myBookCollection = new BookCollection();
+  myBookCollection.fetch({
+    async: false // assskkkkk
+  });
 
 
-    console.log(myBookCollection, 'collection');
-    return myBookCollection;
+  console.log(myBookCollection, 'collection');
+  return myBookCollection;
 });
