@@ -1,7 +1,7 @@
 define([
-    'jquery', 'underscore', 'backbone', 'js/collections/myBookCollection', 'js/collections/myFavouritesCollection', 'js/views/header', 'js/views/myBookLibraryView', 'js/views/favouritesView'
+    'jquery', 'underscore', 'backbone', 'js/collections/myBookCollection', 'js/collections/myFavouritesCollection', 'js/views/header', 'js/views/myBookLibraryView', 'js/views/favouritesView', 'js/views/filteredView'
 
-], function($, _, Backbone, MyBookCollection, favouritesCollection, headerView, libraryView, myfavouritesView) {
+], function($, _, Backbone, MyBookCollection, favouritesCollection, headerView, libraryView, myfavouritesView, myFilteredView) {
     var myFavouritesCollection = new favouritesCollection();
     var newView = new headerView();
     var library = new libraryView({
@@ -13,7 +13,8 @@ define([
     var Router = Backbone.Router.extend({
         initialize: function(options) {
             this.route('', 'index');
-            this.route('show/:id', 'viewBook');
+            this.route('show/favs', 'viewFavourites');
+            this.route('show/filters', 'filteredview');
 
         },
 
@@ -23,11 +24,17 @@ define([
             $('#container').empty();
             library.$el.appendTo('#container');
         },
-
-        viewBook: function(id) {
+        viewFavourites: function() {
             library.remove();
             library = new myfavouritesView({
                 favouritesCollection: myFavouritesCollection
+            });
+            library.$el.appendTo('#container');
+        },
+        filteredview: function() {
+            library.remove();
+            library = new myFilteredView({
+                filteredCollection: MyBookCollection
             });
             library.$el.appendTo('#container');
         }

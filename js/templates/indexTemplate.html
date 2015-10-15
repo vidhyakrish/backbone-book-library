@@ -4,11 +4,11 @@
 <div class="book-item">
 
   <i class="icon-book"></i><h3><%- item.get('name') %><span > (<%- item.get('id')%>)</span></h3>
-  <h4 class="text-info"><%- item.get('author') %></h4>
+  <span class="text-info" id="author"><%- item.get('author') %></span>
 <p>
-  <span class ="btn btn-default"><%- item.get('genre_s').toUpperCase() %></span>
-<span class ="btn btn-default">&pound;<%- item.get('price') %></span>
-<% if(!!item.get('series_t')) { %><span class ="btn btn-default"><%- item.get('series_t') %></span><%}%>
+  <span class ="btn btn-default" id="genre_s"><%- item.get('genre_s').toUpperCase() %></span>
+<span class ="btn btn-default" id="price">&pound;<%- item.get('price') %></span>
+<% if(!!item.get('series_t')) { %><span class ="btn btn-default" id="series_t"><%- item.get('series_t') %></span><%}%>
 
 
 </p>
