@@ -1,4 +1,4 @@
-define(['jquery', 'underscore', 'backbone', 'text!js/templates/indexTemplate.html', 'js/collections/myBookCollection'], function($, _, Backbone, filterTemplate, filteredCollection) {
+define(['jquery', 'underscore', 'backbone', 'text!js/templates/indexTemplate.html', 'js/collections/BookCollection'], function($, _, Backbone, filterTemplate, filteredCollection) {
 
   var filteredView = Backbone.View.extend({
     collection: filteredCollection,
@@ -11,7 +11,6 @@ define(['jquery', 'underscore', 'backbone', 'text!js/templates/indexTemplate.htm
       this.$el.append(this.template({
         items: this.filteredCollection
       }));
-      console.log(this.$el);
     }
   });
   return filteredView;

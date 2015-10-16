@@ -4,7 +4,7 @@ define([
 ], function($, _, Backbone, BookCollection, favouritesCollection, headerView, libraryView, myfavouritesView, myFilteredView, addNewItemView) {
   var myFavouritesCollection = new favouritesCollection();
   var myBookCollection = new BookCollection();
-  //var myFilteredCollection = new BookCollection();
+
   var newView;
   var library;
   myBookCollection.fetch({
@@ -19,7 +19,6 @@ define([
       this.route('show/filters', 'filteredview');
       this.route('add-new', 'addNew');
       this.route('home', 'index');
-
     },
 
     index: function() {
@@ -28,8 +27,7 @@ define([
         idAttribute: "#home"
       });
       newView.$el.appendTo('header');
-      // $('header').find('#home').addClass('active');
-      // $('header').find('#favs').removeClass('active');
+
       $('#container').empty();
       if (library !== undefined) {
         library.remove();
@@ -46,8 +44,7 @@ define([
       newView = new headerView({
         idAttribute: "#favs"
       });
-      // $('header').find('#home').removeClass('active');
-      // $('header').find('#favs').addClass('active');
+
       newView.$el.appendTo('header');
       if (library !== undefined) {
         library.remove();
@@ -64,8 +61,7 @@ define([
         idAttribute: "#add-new"
       });
       newView.$el.appendTo('header');
-      // $('header').find('#home').removeClass('active');
-      // $('header').find('#add-new').addClass('active');
+
       if (library !== undefined) {
         library.remove();
       }

@@ -1,14 +1,15 @@
 <div id="index-template" class="row">
   <% items.each(function(item){ %>
   <div class="book-item">
-    <i class="icon-book"></i><h3><%- item.get('name') %><span > (<%- item.get('id')%>)</span></h3>
-    <span class="text-info" id="author"><%- item.get('author') %></span>
+    <i class="icon-book"></i><h3><%- item.get('name') %><span > (<%- item.get('isbn')%>)</span></h3>
+    <p><span class="text-info author" id="author"><%- item.get('author') %></span></p>
     <p>
       <span class ="btn btn-default genre_s" id="genre_s"><%- item.get('genre_s') %></span>
-      <span class ="btn btn-default price" id="price">&pound;<%- item.get('price') %></span>
-      <% if(!!item.get('series_t')) { %><span class ="btn btn-default series_t" id="series_t"><%- item.get('series_t') %></span><%}%>
     </p>
-    <a class="btn btn-success" id="<%- item.get('id') %>">Add to favourites </a>
+    <% if(!!item.get('series_t')) { %><h5>Series: <span class ="series_t" id="series_t"><%- item.get('series_t') %></span></h5><%}%>
+    <p><span class ="price" id="price">&pound;<%- item.get('price') %></span></p>
+    <p>
+      <a class="btn btn-success" id="<%- item.get('id') %>"><i class="glyphicon-plus "></i> Add to favourites </a></p>
+    </div>
+    <% }); %>
   </div>
-  <% }); %>
-</div>

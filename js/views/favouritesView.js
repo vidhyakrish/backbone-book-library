@@ -12,8 +12,8 @@ define(
         _this.$el.append(_this.template({
           items: this.collection
         }));
+        _this.$('.btn-success').hide();
 
-        _this.$('#favs').addClass('active');
       }
 
     });

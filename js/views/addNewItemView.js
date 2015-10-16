@@ -9,23 +9,20 @@ define(
       },
       initialize: function(options) {
         this.collection = options.collection;
-        console.log(this.collection);
-
         this.render();
       },
       render: function() {
         this.$el.append(this.template());
       },
       addNew: function() {
-
         var name = this.$('#name').val(),
           author = this.$('#author').val(),
           price = this.$('#price').val(),
           genre = this.$('#genre').val(),
           pages = this.$('#pages').val(),
-          cats = this.$('cats').val(),
+          cats = this.$('#cats').val(),
 
-      isbn = this.$('isbn').val();
+          isbn = this.$('#isbn').val();
 
         var model = new BookModel({
 
@@ -42,14 +39,8 @@ define(
 
         model.save();
         this.collection.add(model);
-        // this.collection.add({
 
-
-        // });
         Backbone.history.navigate("#", true);
-
-        //this.collection.save();
-
       }
 
     });

@@ -47,7 +47,6 @@ define([
     filterByParam: function(e) {
       this.valueQuery = $(e.target).text();
       this.keyQuery = $(e.target).attr('id');
-      console.log(this.collection);
 
       var _this = this;
       this.FilteredCollection = new BookCollection(this.collection.filter(function(item, keyQuery, valueQuery) {
@@ -58,7 +57,6 @@ define([
       }));
 
       this.$el.empty();
-
       _this.$el.append(_this.template({
         items: this.FilteredCollection
       }));

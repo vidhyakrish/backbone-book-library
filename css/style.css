@@ -1,19 +1,51 @@
-.container{
+body{
+  font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif
+}
+  .container{
   margin-bottom:30px;
 }
 header{
   padding-bottom:20px;
   border-bottom:1px solid #333;
 }
+p{
+  margin:0 0 5px;
+}
+h3{
+  font-weight: bold;
+}
   h3 span{
   font-size:16px;
+}
+h5{
+  /*color:#fb6964*/
+  font-style:italic;
+}
+.book-item{
+  padding-bottom:20px;
 }
 .genre_s{
   text-transform: uppercase;
 }
+.author{
+  font-size: 18px;
+  color:#7c7c7c;
+}
+.price{
+  font-weight: bold;
+  font-size: 18px;
+}
+.btn-success,.btn-warning{
+  font-size: 12px;
+
+}
+.btn-warning{
+  color:#000;
+  }
 .control-group{
   margin-bottom:10px;
 }
+
 button.btn{
 margin-top:30px;
 }
