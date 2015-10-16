@@ -32,38 +32,35 @@ define([
 
     addToFavourites: function(e) {
       var bookId = $(e.target).attr('id');
+
       $(e.target).html('Added to favourites').removeClass('btn-success').addClass('btn-warning');
       var _this = this;
       this.collection.each(function(item) {
-        if (item.get('id') === bookId) {
+        if (item.get('id') == bookId) {
           _this.myFavouritesCollection.add(item);
         }
       });
-
 
     },
 
 
     filterByParam: function(e) {
+      this.valueQuery = $(e.target).text();
+      this.keyQuery = $(e.target).attr('id');
+      console.log(this.collection);
 
-      var query = $(e.target).text();
-      var keyQuery = $(e.target).attr('id');
+      var _this = this;
+      this.FilteredCollection = new BookCollection(this.collection.filter(function(item, keyQuery, valueQuery) {
 
-      if (keyQuery === 'genre_s') {
-        this.filteredCollection = new BookCollection(this.collection.where({
-          genre_s: query
-        }));
-      } else if (keyQuery === 'author') {
-        this.filteredCollection = new BookCollection(this.collection.where({
-          author: query
-        }));
-      }
-
+        var keyQueryValue = _this.keyQuery,
+          valueQueryValue = _this.valueQuery;
+        return item.get(keyQueryValue) === valueQueryValue;
+      }));
 
       this.$el.empty();
-      var _this = this;
+
       _this.$el.append(_this.template({
-        items: this.filteredCollection
+        items: this.FilteredCollection
       }));
     }
 

@@ -4,6 +4,7 @@ define([
 ], function($, _, Backbone) {
 
   var bookModel = Backbone.Model.extend({
+    urlRoot: 'http://wc4042gsd.emea.ad.jpmorganchase.com:3000/library',
     defaults: function() {
       return {
         id: null,
@@ -15,7 +16,8 @@ define([
         genre_s: null,
         inStock: true,
         price: null,
-        pages_i: 384
+        pages_i: 384,
+        isbn: null
       };
     }
 

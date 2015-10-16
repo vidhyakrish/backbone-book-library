@@ -4,7 +4,8 @@ define([
 ], function($, _, Backbone, BookCollection, favouritesCollection, headerView, libraryView, myfavouritesView, myFilteredView, addNewItemView) {
   var myFavouritesCollection = new favouritesCollection();
   var myBookCollection = new BookCollection();
-  var newView = new headerView();
+  //var myFilteredCollection = new BookCollection();
+  var newView;
   var library;
   myBookCollection.fetch({
     async: false // assskkkkk
@@ -23,9 +24,12 @@ define([
 
     index: function() {
       $('header').empty();
+      newView = new headerView({
+        idAttribute: "#home"
+      });
       newView.$el.appendTo('header');
-      $('header').find('#home').addClass('active');
-      $('header').find('#favs').removeClass('active');
+      // $('header').find('#home').addClass('active');
+      // $('header').find('#favs').removeClass('active');
       $('#container').empty();
       if (library !== undefined) {
         library.remove();
@@ -33,29 +37,38 @@ define([
       library = new libraryView({
         favouritesCollection: myFavouritesCollection,
         collection: myBookCollection
+
       });
       library.$el.appendTo('#container');
     },
     viewFavourites: function() {
-      $('header').find('#home').removeClass('active');
-      $('header').find('#favs').addClass('active');
-      library.remove();
+      $('header').empty();
+      newView = new headerView({
+        idAttribute: "#favs"
+      });
+      // $('header').find('#home').removeClass('active');
+      // $('header').find('#favs').addClass('active');
+      newView.$el.appendTo('header');
+      if (library !== undefined) {
+        library.remove();
+      }
       library = new myfavouritesView({
         collection: myFavouritesCollection
       });
       library.$el.appendTo('#container');
     },
-    // filteredview: function() {
-    //     library.remove();
-    //     library = new myFilteredView({
-    //         filteredCollection: MyBookCollection
-    //     });
-    //     library.$el.appendTo('#container');
-    // },
+
     addNew: function() {
       $('header').empty();
+      newView = new headerView({
+        idAttribute: "#add-new"
+      });
       newView.$el.appendTo('header');
-      library.remove();
+      // $('header').find('#home').removeClass('active');
+      // $('header').find('#add-new').addClass('active');
+      if (library !== undefined) {
+        library.remove();
+      }
       var addNewView = new addNewItemView({
         collection: myBookCollection
       });

@@ -3,12 +3,17 @@ define(
 
     var index = Backbone.View.extend({
       template: _.template(headerTemplate),
-      initialize: function() {
+      initialize: function(options) {
+        this.idAttribute = options.idAttribute;
         this.render();
+
       },
       render: function() {
-        console.log(this.$el);
         this.$el.append(this.template());
+        this.toggleClass();
+      },
+      toggleClass: function() {
+        this.$(this.idAttribute).removeClass('inactive').addClass('active');
       }
 
     });

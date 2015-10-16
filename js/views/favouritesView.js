@@ -12,7 +12,7 @@ define(
         _this.$el.append(_this.template({
           items: this.collection
         }));
-        console.log(this.$('#favs'));
+
         _this.$('#favs').addClass('active');
       }
 
