@@ -12,7 +12,9 @@ define(
         this.render();
       },
       render: function() {
-        this.$el.append(this.template());
+        this.$el.append(this.template({
+          breadcrumb: 'Add new item to Library'
+        }));
       },
       addNew: function() {
         var name = this.$('#name').val(),

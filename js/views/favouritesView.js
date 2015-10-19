@@ -10,7 +10,8 @@ define(
         var _this = this;
 
         _this.$el.append(_this.template({
-          items: this.collection
+          items: this.collection,
+          breadcrumb: 'My Favourites'
         }));
         _this.$('.btn-success').hide();
 

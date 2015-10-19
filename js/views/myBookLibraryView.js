@@ -20,12 +20,13 @@ define([
     },
 
     render: function(options) {
-      this.$el.html('<h3>All my books</h3>');
+
 
       var _this = this;
 
       _this.$el.append(_this.template({
-        items: this.collection
+        items: this.collection,
+        breadcrumb: 'Available Books'
       }));
 
     },
@@ -58,7 +59,8 @@ define([
 
       this.$el.empty();
       _this.$el.append(_this.template({
-        items: this.FilteredCollection
+        items: this.FilteredCollection,
+        breadcrumb: 'Books filtered by ' + '\'' + this.valueQuery + '\''
       }));
     }
 
