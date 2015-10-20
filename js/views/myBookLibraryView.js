@@ -9,7 +9,8 @@ define([
 
     events: {
       'click a': 'addToFavourites',
-      'click span': 'filterByParam'
+      'click span': 'filterByParam',
+      'click #edit-item': 'editItem'
     },
 
     initialize: function(options) {
@@ -62,6 +63,13 @@ define([
         items: this.FilteredCollection,
         breadcrumb: 'Books filtered by ' + '\'' + this.valueQuery + '\''
       }));
+    },
+
+    editItem: function(e) {
+      var itemId = $(e.target).closest('.book-item').attr('id');
+      Backbone.history.navigate('edit/' + itemId, {
+        trigger: true
+      });
     }
 
   });

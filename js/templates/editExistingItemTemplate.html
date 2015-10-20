@@ -1,0 +1,56 @@
+<h3 class="breadcrumb"><%= breadcrumb %></h3>
+
+<form class="form-horizontal">
+  <div class="control-group">
+    <label class="control-label" for="name">Title</label>
+    <div class="controls">
+      <input type="text" id="name" placeholder="Title" value="<%- book.name %>">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="author">Author</label>
+    <div class="controls">
+      <input type="text" id="author" placeholder="Author" value="<%- book.author %>">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="genre">Genre</label>
+    <div class="controls">
+      <select id="genre">
+        <option>fantasy</option>
+        <option >scifi</option>
+        <option>it</option>
+      </select>
+    </div>
+  </div>
+
+   <div class="control-group">
+    <label class="control-label" for="isbn">ISBN</label>
+    <input type="text" id="isbn" placeholder="ISBN" value="<%- book.isbn%>">
+  </div>
+</div>
+
+  <div class="control-group">
+    <label class="control-label" for="price">Price</label>
+    <input type="text" id="price" placeholder="Price" value="<%- book.price %>">
+  </div>
+</div>
+
+<div class="control-group">
+    <label class="control-label" for="pages">Pages</label>
+    <input type="text" id="pages" placeholder="Pages" value="<%- book.pages_i %>">
+  </div>
+</div>
+
+<div class="control-group">
+    <label class="control-label" for="cats">Category</label>
+    <input type="text" id="cats" placeholder="Category" value="<%- book.cats %>">
+  </div>
+</div>
+
+<div class="control-group">
+  <div class="controls">
+    <button type="submit" id="submit" class="btn btn-primary"> <i class="glyphicon-plus "></i> Update library</button>
+  </div>
+</div>
+</form>
