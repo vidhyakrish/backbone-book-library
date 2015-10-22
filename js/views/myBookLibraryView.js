@@ -9,8 +9,9 @@ define([
 
     events: {
       'click a': 'addToFavourites',
-      'click span': 'filterByParam',
+      'click .filter': 'filterByParam',
       'click #edit-item': 'editItem'
+
     },
 
     initialize: function(options) {
@@ -71,6 +72,7 @@ define([
         trigger: true
       });
     }
+
 
   });
   return myBookLibraryView;

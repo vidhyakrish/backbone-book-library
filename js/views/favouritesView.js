@@ -11,7 +11,8 @@ define(
 
         _this.$el.append(_this.template({
           items: this.collection,
-          breadcrumb: 'My Favourites'
+          breadcrumb: 'My Favourites',
+          noOfFavs: this.collection.length
         }));
         _this.$('.btn-success').hide();
 

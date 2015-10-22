@@ -8,19 +8,20 @@ define([
   var newView;
   var currentView;
   myBookCollection.fetch({
-    async: false // assskkkkk
+    async: false
   });
 
 
   var Router = Backbone.Router.extend({
     initialize: function(options) {
       this.route('', 'index');
-      this.route('show/all', 'showAll');
+
       this.route('show/favs', 'viewFavourites');
       this.route('show/filters', 'filteredview');
       this.route('add-new', 'addNew');
       this.route('edit/:itemId', 'editItem');
       this.route('home', 'index');
+
     },
 
     resetHeader: function(tag) {
@@ -55,24 +56,16 @@ define([
       this.createCurrentView();
     },
 
-    showAll: function() {
-      this.resetHeader('#all');
-      this.resetCurrentView();
-
-      currentView = new libraryView({
-
-        collection: myBookCollection
-      });
-
-      this.createCurrentView();
-    },
-
     viewFavourites: function() {
       this.resetHeader('#favs');
       this.resetCurrentView();
       currentView = new myfavouritesView({
         collection: myFavouritesCollection
       });
+
+      if (myFavouritesCollection.length < 1) {
+        console.log('no favs');
+      }
       this.createCurrentView();
     },
 

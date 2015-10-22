@@ -1,12 +1,12 @@
-
+<% if(items.length < 1){ %><p>You do not have any favourites. Please add from library. </p> <% } %>
 <h3 class="breadcrumb"><%= breadcrumb %></h3>
 <div id="index-template" class="row">
   <% items.each(function(item){ %>
   <div class="book-item" id="<%- item.get('id') %>">
     <h3><%- item.get('name') %><span > (<%- item.get('isbn')%>)</span><i id="edit-item" class="glyphicon glyphicon-pencil "></i></h3>
-    <p><span class="text-info author" id="author"><%- item.get('author') %></span></p>
+    <p><span class="text-info author filter" id="author"><%- item.get('author') %></span></p>
     <p>
-      <span class ="btn btn-default genre_s" id="genre_s"><%- item.get('genre_s') %></span>
+      <span class ="btn btn-default genre_s filter" id="genre_s"><%- item.get('genre_s') %></span>
     </p>
     <% if(!!item.get('series_t')) { %><h5>Series: <span class ="series_t" id="series_t"><%- item.get('series_t') %></span></h5><%}%>
     <p><span class ="price" id="price">&pound;<%- item.get('price') %></span></p>
