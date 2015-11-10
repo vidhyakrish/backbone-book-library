@@ -10,9 +10,10 @@ Browse the library, find prices,titles and authors, add new items, edit existing
 
 Setup:
 
-Run 'Grunt' on commandline from the folder 'Backbone_app'.
+Run 'Grunt' on commandline from the folder 'Backbone_app' or where the app resides.
 
-server will run  on port 8080.
+Server will run  on port 8080 on the local ip address.
+You can connect to the server http://localhost:8080/
 
 
 Other info:
