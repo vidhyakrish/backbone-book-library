@@ -63,9 +63,6 @@ define([
         collection: myFavouritesCollection
       });
 
-      if (myFavouritesCollection.length < 1) {
-        console.log('no favs');
-      }
       this.createCurrentView();
     },
 

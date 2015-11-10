@@ -10,7 +10,8 @@ define([
     events: {
       'click a': 'addToFavourites',
       'click .filter': 'filterByParam',
-      'click #edit-item': 'editItem'
+      'click #edit-item': 'editItem',
+      'click #show-all': 'showAll'
 
     },
 
@@ -69,6 +70,13 @@ define([
     editItem: function(e) {
       var itemId = $(e.target).closest('.book-item').attr('id');
       Backbone.history.navigate('edit/' + itemId, {
+        trigger: true
+      });
+    },
+
+    showAll: function() {
+
+      Backbone.history.navigate('', {
         trigger: true
       });
     }

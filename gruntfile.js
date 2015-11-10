@@ -1,14 +1,9 @@
 module.exports = function(grunt) {
 
-
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
-    /** concat transitory files into final js */
-    // concat: {
-    //  'dist/build.js':'js/**/*.js'
 
-    // },
     /** Lint all CSS */
     csslint: {
       options: {
@@ -56,9 +51,7 @@ module.exports = function(grunt) {
       ]
     },
     watch: {
-      // options: {
-      //   livereload: 35724
-      // },
+
 
       scripts: {
         files: ['js/**/*.js'],
@@ -76,7 +69,7 @@ module.exports = function(grunt) {
       server: {
         options: {
 
-          // livereload: 35724,
+
           port: 8080,
           keepalive: true
         }
@@ -85,9 +78,6 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-connect');
-
-
-
   grunt.loadNpmTasks('grunt-contrib-csslint');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -96,15 +86,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-requirejs');
 
-
-
-
-
-
-
-
   grunt.registerTask('jshint', ['jshint']);
-
   grunt.registerTask('default', 'connect:server');
 
 };

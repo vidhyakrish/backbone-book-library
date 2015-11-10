@@ -1,0 +1,464 @@
+[
+
+  {
+
+    "id": 1,
+    "isbn": "978-0641723445",
+
+    "cat": [
+      "book",
+      "hardcover"
+    ],
+    "name": "The Lightning Thief",
+    "author": "Rick Riordan",
+    "series_t": "Percy Jackson and the Olympians",
+    "sequence_i": 1,
+    "genre_s": "fantasy",
+    "inStock": true,
+    "price": 12.5,
+    "pages_i": 384
+
+  }, {
+
+    "id": 2,
+    "isbn": "978-1857995879",
+
+    "cat": [
+      "book",
+      "paperback"
+    ],
+    "name": "Sophie's World : The Greek Philosophers",
+    "author": "Jostein Gaarder",
+    "sequence_i": 1,
+    "genre_s": "fantasy",
+    "inStock": true,
+    "price": 3.07,
+    "pages_i": 64
+
+  }, {
+
+    "id": 3,
+    "isbn": "978-1933988177",
+
+    "cat": [
+      "book",
+      "paperback"
+    ],
+    "name": "Lucene in Action, Second Edition",
+    "author": "Michael McCandless",
+    "sequence_i": 1,
+    "genre_s": "IT",
+    "inStock": true,
+    "price": 30.5,
+    "pages_i": 475
+
+  }, {
+
+    "id": 4,
+    "isbn": "978-0553573403",
+
+    "cat": [
+      "book"
+    ],
+    "name": "A Game of Thrones",
+    "author": "George R.R. Martin",
+    "series_t": "A Song of Ice and Fire",
+    "sequence_i": 1,
+    "genre_s": "fantasy",
+    "inStock": true,
+    "price": 7.99
+
+  }, {
+
+    "id": 5,
+    "isbn": "978-0553579908",
+
+    "cat": [
+      "book"
+    ],
+    "name": "A Clash of Kings",
+    "author": "George R.R. Martin",
+    "series_t": "A Song of Ice and Fire",
+    "sequence_i": 1,
+    "genre_s": "fantasy",
+    "inStock": true,
+    "price": "7.99",
+    "pages_i": "420",
+    "cats": ""
+
+  }, {
+
+    "id": 6,
+    "isbn": "978-055357342X",
+
+    "cat": [
+      "book"
+    ],
+    "name": "A Storm of Swords",
+    "author": "George R.R. Martin",
+    "series_t": "A Song of Ice and Fire",
+    "sequence_i": 3,
+    "genre_s": "fantasy",
+    "inStock": true,
+    "price": 7.99
+
+  }, {
+
+    "id": 7,
+    "isbn": "978-0553293354",
+
+    "cat": [
+      "book"
+    ],
+    "name": "Foundation",
+    "author": "Isaac Asimov",
+    "series_t": "Foundation Novels",
+    "sequence_i": 1,
+    "genre_s": "fantasy",
+    "inStock": true,
+    "price": "7.99",
+    "pages_i": "384",
+    "cats": ""
+
+  }, {
+
+    "id": 8,
+    "isbn": "978-0812521390",
+
+    "cat": [
+      "book"
+    ],
+    "name": "The Black Company",
+    "author": "Glen Cook",
+    "series_t": "The Chronicles of The Black Company",
+    "sequence_i": 1,
+    "genre_s": "fantasy",
+    "inStock": true,
+    "price": 6.99
+
+  }, {
+
+    "id": 9,
+    "isbn": "978-0812550706",
+
+    "cat": [
+      "book"
+    ],
+    "name": "Ender's Game",
+    "author": "Orson Scott Card",
+    "series_t": "Ender",
+    "sequence_i": 1,
+    "genre_s": "scifi",
+    "inStock": true,
+    "price": 6.99
+
+  }, {
+
+    "id": 10,
+    "isbn": "978-0441385532",
+
+    "cat": [
+      "book"
+    ],
+    "name": "Jhereg",
+    "author": "Steven Brust",
+    "series_t": "Vlad Taltos",
+    "sequence_i": 1,
+    "genre_s": "fantasy",
+    "inStock": true,
+    "price": 7.95
+
+  }, {
+
+    "id": 11,
+    "isbn": "978-0380014300",
+
+    "cat": [
+      "book"
+    ],
+    "name": "Nine Princes In Amber",
+    "author": "Roger Zelazny",
+    "series_t": "The Chronicles of Amber",
+    "sequence_i": 1,
+    "genre_s": "fantasy",
+    "inStock": true,
+    "price": 6.99
+
+  }, {
+
+    "id": 12,
+    "isbn": "978-0805080481",
+
+    "cat": [
+      "book"
+    ],
+    "name": "The Book of Three",
+    "author": "Lloyd Alexander",
+    "series_t": "The Chronicles of Prydain",
+    "sequence_i": 2,
+    "genre_s": "fantasy",
+    "inStock": true,
+    "price": 5.99
+
+  }, {
+
+    "id": 13,
+    "isbn": "978-080508049X",
+
+    "cat": [
+      "book"
+    ],
+    "name": "The Black Cauldron",
+    "author": "Lloyd Alexander",
+    "series_t": "The Chronicles of Prydain",
+    "sequence_i": 2,
+    "genre_s": "fantasy",
+    "inStock": true,
+    "price": 5.99
+
+  }, {
+
+    "id": 14,
+    "isbn": "978-0586010808",
+
+    "cat": [
+      "book",
+      "hardcover"
+    ],
+    "name": "Foundation",
+    "author": "Isaac Asimov",
+    "series_t": "Foundation Series",
+    "sequence_i": 1,
+    "genre_s": "scifi",
+    "inStock": true,
+    "price": 7.99,
+    "pages_i": 240
+
+  }, {
+
+    "id": 15,
+    "isbn": "978-0586013557",
+
+    "cat": [
+      "book",
+      "hardcover"
+    ],
+    "name": "Foundation and Empire",
+    "author": "Isaac Asimov",
+    "series_t": "Foundation Series",
+    "sequence_i": 2,
+    "genre_s": "scifi",
+    "inStock": true,
+    "price": 7.99,
+    "pages_i": 240
+
+  }, {
+
+    "id": 16,
+    "isbn": "978-0586017135",
+
+    "cat": [
+      "book",
+      "hardcover"
+    ],
+    "name": "Second Foundation",
+    "author": "Isaac Asimov",
+    "series_t": "Foundation Series",
+    "sequence_i": 3,
+    "genre_s": "scifi",
+    "inStock": true,
+    "price": 7.99,
+    "pages_i": 240
+
+  }, {
+
+    "id": 17,
+    "isbn": "978-1408855652",
+
+    "cat": [
+      "book",
+      "hardcover"
+    ],
+    "name": "Harry Potter and the Philosopher's Stone",
+    "author": "J.K. Rowling",
+    "series_t": "Harry Potter",
+    "sequence_i": 1,
+    "genre_s": "fantasy",
+    "inStock": true,
+    "price": 6.99,
+    "pages_i": 352
+
+  }, {
+
+    "id": 18,
+    "isbn": "978-1408855669",
+
+    "cat": [
+      "book",
+      "hardcover"
+    ],
+    "name": "Harry Potter and the Chamber of Secrets",
+    "author": "J.K. Rowling",
+    "series_t": "Harry Potter",
+    "sequence_i": 2,
+    "genre_s": "fantasy",
+    "inStock": true,
+    "price": 6.99,
+    "pages_i": 384
+
+  }, {
+
+    "id": 19,
+    "isbn": "978-1408855676",
+
+    "cat": [
+      "book",
+      "hardcover"
+    ],
+    "name": "Harry Potter and the Prisoner of Azkaban",
+    "author": "J.K. Rowling",
+    "series_t": "Harry Potter",
+    "sequence_i": 3,
+    "genre_s": "fantasy",
+    "inStock": true,
+    "price": 6.99,
+    "pages_i": 480
+
+  }, {
+
+    "id": 20,
+    "isbn": "978-1423103349",
+
+    "cat": [
+      "book",
+      "paperback"
+    ],
+    "name": "The Sea of Monsters",
+    "author": "Rick Riordan",
+    "series_t": "Percy Jackson and the Olympians",
+    "sequence_i": 2,
+    "genre_s": "fantasy",
+    "inStock": true,
+    "price": 6.49,
+    "pages_i": 304
+
+  }, {
+
+    "id": 21,
+    "name": "first book",
+    "author": "author",
+    "price": "13",
+    "genre_s": "scifi",
+    "sequence_i": 1,
+    "inStock": true,
+    "pages_i": "345",
+    "isbn": "978-1423103379",
+    "cat": null,
+    "series_t": null
+
+  }, {
+
+    "name": "Red",
+    "author": "Helen Davidson",
+    "price": "34",
+    "genre_s": "fantasy",
+    "sequence_i": 1,
+    "inStock": true,
+    "pages_i": "234",
+    "isbn": null,
+    "id": 21,
+    "cat": null,
+    "series_t": null
+
+  }, {
+
+    "name": "The Hunger Games 2",
+    "author": "Suzanne Collins",
+    "price": "45",
+    "genre_s": "fantasy",
+    "sequence_i": 1,
+    "inStock": true,
+    "pages_i": "1456",
+    "isbn": null,
+    "id": 22,
+    "cat": null,
+    "series_t": null
+
+  }, {
+
+    "name": "Developing Backbone.js Applications",
+    "author": "Addy Osmani",
+    "price": "£33.50",
+    "genre_s": "it",
+    "sequence_i": 1,
+    "inStock": true,
+    "pages_i": "374",
+    "cats": "paperback",
+    "isbn": "978-1-4493-2825-2",
+    "id": 23,
+    "cat": null,
+    "series_t": null
+
+  }, {
+
+    "name": "Developing Backbone.js Applications",
+    "author": "Addy Osmani",
+    "price": "£33.50",
+    "genre_s": "fantasy",
+    "sequence_i": 1,
+    "inStock": true,
+    "pages_i": "234",
+    "cats": "paperback",
+    "isbn": "978-1-4493-2825-2",
+    "id": 24,
+    "cat": null,
+    "series_t": null
+
+  }, {
+
+    "name": "Developing Backbone.js Applications",
+    "author": "Addy Osmani",
+    "price": "£33.50",
+    "genre_s": "fantasy",
+    "sequence_i": 1,
+    "inStock": true,
+    "pages_i": "456",
+    "cats": "paperback",
+    "isbn": "978-1-4493-2825-2",
+    "id": 25,
+    "cat": null,
+    "series_t": null
+
+  }, {
+
+    "name": "Dan's Guide to Adding a new item to the Library",
+    "author": "Dan",
+    "price": "9999",
+    "genre_s": "fantasy",
+    "sequence_i": 1,
+    "inStock": true,
+    "pages_i": "1",
+    "cats": "Silly",
+    "isbn": "012301230123",
+    "id": 26,
+    "cat": null,
+    "series_t": null
+
+  },
+
+  {
+    "name": "Backbone",
+    "author": "David H Wagner",
+    "price": "price",
+    "genre_s": "fantasy",
+    "sequence_i": 1,
+    "inStock": true,
+    "pages_i": "256",
+    "cats": "33333333333333333333",
+    "isbn": "9781780288284",
+    "id": 27,
+    "cat": null,
+    "series_t": null
+  }
+
+]

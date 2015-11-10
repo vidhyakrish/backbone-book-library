@@ -1,6 +1,10 @@
-<% if(items.length < 1){ %><p>You do not have any favourites. Please add from library. </p> <% } %>
+
 <h3 class="breadcrumb"><%= breadcrumb %></h3>
+
+<% if(items.length < 1){ %><p>You do not have any favourites. Please add from library. </p> <% } %>
 <div id="index-template" class="row">
+
+
   <% items.each(function(item){ %>
   <div class="book-item" id="<%- item.get('id') %>">
     <h3><%- item.get('name') %><span > (<%- item.get('isbn')%>)</span><i id="edit-item" class="glyphicon glyphicon-pencil "></i></h3>

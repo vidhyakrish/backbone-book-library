@@ -28,7 +28,6 @@ define(['jquery', 'underscore', 'backbone', 'text!js/templates/editExistingItemT
         isbn = this.$('#isbn').val();
 
       this.model.set({
-
         name: name,
         author: author,
         price: price,
