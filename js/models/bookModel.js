@@ -4,7 +4,7 @@ define([
 ], function($, _, Backbone) {
 
   var bookModel = Backbone.Model.extend({
-    urlRoot: 'http://wc4042gsd.emea.ad.jpmorganchase.com:3000/library',
+    urlRoot: 'localhost:300/library',
     defaults: function() {
       return {
         id: null,
